@@ -9,7 +9,7 @@
 #ifndef STACK_H
 #define STACK_H
 
-#define STACKSIZE 10
+#define STACKSIZE 10 // INSTRUCTIONAL: do not use literals in the code, use constants
 
 class Stack {
 
