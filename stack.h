@@ -9,6 +9,8 @@
 #ifndef STACK_H
 #define STACK_H
 
+#define STACKSIZE 10
+
 class Stack {
 
 public:
@@ -43,6 +45,8 @@ private:
     * Attributes
     **********************/
 
+    int top; //INSTRUCTIONAL: do not initialize here, use the constructor
+    int stack[STACKSIZE]; //INSTRUCTIONAL: do not use literals here, use a constant
 
 };
 
