@@ -3,7 +3,6 @@
  * Author: Alex Katrompas
  * The interface for main() which is a simple
  * test script.
- *
  * ******************************************/
 
 #ifndef STACK_MAIN_H
