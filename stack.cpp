@@ -26,7 +26,7 @@ Stack::Stack() {
 
 Stack::~Stack() {
     /* ****************************************
-    Constructor
+    Destructor
 
     @param na : na
     @return na : na

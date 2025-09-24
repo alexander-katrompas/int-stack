@@ -20,7 +20,7 @@
 #include <time.h>   // time
 #include <cmath>    // round
 #include "stack.h"  // stack class
-#include "stack.h" // Stack
+#include "stack.h"  // Stack
 
 using std::cout;
 using std::endl;
