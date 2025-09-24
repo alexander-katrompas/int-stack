@@ -23,9 +23,25 @@ int main() {
           at once for simplicity and demonstration purposes
     *********************************************/
 
+    // seeds the rand() function
+    // INSTRUCTIONAL: call only ONCE!
+    srand(time(NULL));
+
+    /*  INSTRUCTIONAL: make only one stack for testing!
+        do not create multiple stacks unless you intend to test
+        them all independently and completely */
     Stack stack;
     cout << "Stack created." << endl;
 
+    int value; // generic int used for testing
+
+    // counters for tests
+    int is_empty = 0;
+    int peeked = 0;
+    int popped = 0;
+    int pushed = 0;
+
+    cout << "Beginning tests..." << endl;
 
    return 0;
 }
