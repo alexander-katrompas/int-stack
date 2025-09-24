@@ -36,6 +36,15 @@ Stack::~Stack() {
     }
 
     bool Stack::isEmpty() {
+        /* ****************************************
+        isEmpty - is the stack empty?
+
+        @param na : na
+        @return (bool)) : true if empty, false if not
+        @exception na : na
+        @note the 'this' designation is optional. use it where
+        there is ambiguity or just to be complete and precise.
+        *********************************************/
         return this->top < 0;
     }
 
