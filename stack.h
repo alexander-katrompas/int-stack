@@ -24,22 +24,29 @@ public:
      * Getters/Accessors
      **********************/
 
+    bool isEmpty();
+    bool peek(int*);
 
     /**********************
      * Setters/Mutators
      **********************/
 
+    int pop();
+    bool push(int);
 
     /**********************
     * Printing
     **********************/
 
+    // none
 
 private:
 
     /**********************
     * Methods
     **********************/
+
+    // none
 
     /**********************
     * Attributes

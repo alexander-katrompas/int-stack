@@ -33,5 +33,20 @@ Stack::~Stack() {
     @exception na : na
     @note nothing to do here, no dynamic memory
     *********************************************/
-}
+    }
 
+    bool Stack::isEmpty() {
+        return this->top < 0;
+    }
+
+    bool Stack::peek(int*) {
+        return true;
+    }
+
+    int Stack::pop() {
+        return -1;
+    }
+
+    bool Stack::push(int) {
+        return true;
+    }
