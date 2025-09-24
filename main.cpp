@@ -214,7 +214,63 @@ int main() {
            cout << "failed" << endl;
        }
 
+    /************************************************
+     ******** MID-STACK TESTS ************************
+     ************************************************/
+    // reset counters for tests
+    is_empty = 0;
+    peeked = 0;
+    popped = 0;
+    pushed = 0;
 
+    cout << "  mid-stack tests ==> ";
+    if(STACKSIZE >= MINSTACKSIZE){ // INSTRUCTIONAL: need at least 4 slots to do this test
+
+        // fill stack half-way
+        for (int i = 0; i< int(STACKSIZE / 2); i++) {
+            // using positive and negative "big" numbers
+            value = rand()%2 ? rand() % MAX_INT/2 + 1 : -(rand() % MAX_INT/2 + 1);
+            stack.push(value);
+        }
+
+        for (int i = 0; i < STACKSIZE*MULTIPLIER; i++) {
+            if(stack.isEmpty()){
+                is_empty++;
+            } else {
+                is_empty--;
+            }
+            if(stack.peek(&value)){
+                peeked++;
+            } else {
+                peeked--;
+            }
+            try {
+                value = stack.pop();
+                popped++;
+            } catch (...) {
+                popped--;
+            }
+            // using positive and negative "big" numbers
+            value = rand()%2 ? rand() % MAX_INT/2 + 1 : -(rand() % MAX_INT/2 + 1);
+            if(stack.push(value)){
+                pushed++;
+            } else {
+                pushed--;
+            }
+        }
+
+        if(popped == round(STACKSIZE*MULTIPLIER) &&
+           peeked == round(STACKSIZE*MULTIPLIER) &&
+           pushed == round(STACKSIZE*MULTIPLIER) &&
+           -is_empty == round(STACKSIZE*MULTIPLIER)) {
+            cout << "pass" << endl;
+           } else {
+               cout << "failed" << endl;
+           }
+
+    } else{
+        cout << "skipped, stack too small" << endl;
+    }
 
 
 

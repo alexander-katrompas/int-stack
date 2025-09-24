@@ -12,7 +12,8 @@
 #define NARROW .30 // percent of the stack for a narrow band
 #define RANDOM_MULTIPLIER 10
 #define CHOICES 6 // used to pick random operations
-#define MAX_INT 100000 // random ints to push, 1 - 100000
+#define MAX_INT 10000000 // random ints to push, 1 - 10000000
+#define MINSTACKSIZE 4 // minimum stack size for mid-stack tests
 
 #include <iostream> // cout, endl
 #include <stdio.h>  // rand
