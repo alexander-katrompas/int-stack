@@ -11,6 +11,7 @@
 
 
 #include <iostream> // cout, endl
+#include "stack.h" // Stack
 
 using std::cout;
 using std::endl;

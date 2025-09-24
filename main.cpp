@@ -10,6 +10,10 @@
 
 int main() {
 
+    Stack stack;
+    cout << "Stack created." << endl;
+
+
    return 0;
 }
 
