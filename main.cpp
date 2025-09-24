@@ -43,6 +43,69 @@ int main() {
 
     cout << "Beginning tests..." << endl;
 
+    /************************************************
+    ******* UNDERFLOW TESTS *************************
+    ************************************************/
+
+    cout << "  underflow tests ==> ";
+
+    for (int i = 0; i < STACKSIZE*MULTIPLIER; i++) {
+
+        if (stack.isEmpty()) {
+            // should always increment
+            is_empty++;
+        } else {
+            is_empty--;
+        }
+
+        if(stack.peek(&value)){
+            peeked++;
+        } else {
+            // should always decrement
+            peeked--;
+        }
+
+        try{
+            value = stack.pop();
+            popped++;
+        } catch(...){
+            // should always decrement
+            popped--;
+        }
+
+        if (stack.push(i)){
+            // should always increment
+            pushed++;
+            if(stack.peek(&value)){
+                // should always increment
+                peeked++;
+            } else {
+                peeked--;
+            }
+            try{ // returns to empty
+                // should always increment
+                value = stack.pop();
+                popped++;
+            } catch(...){
+                popped--;
+            }
+        } else{
+            pushed--;
+        }
+    }
+
+    // INSTRUCTIONAL: notice these numbers are logical
+    // in underflow, we should expect these numbers
+    if(popped == 0 &&
+       peeked == 0 &&
+       pushed == round(STACKSIZE*MULTIPLIER) &&
+       is_empty == round(STACKSIZE*MULTIPLIER)) {
+        cout << "pass" << endl;
+       } else {
+           cout << "failed" << endl;
+       }
+
+    
    return 0;
 }
 
