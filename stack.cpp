@@ -47,6 +47,20 @@ Stack::~Stack() {
         return -1;
     }
 
-    bool Stack::push(int) {
-        return true;
+    bool Stack::push(int i) {
+        /* ****************************************
+        Push an item to the top of the stack,
+        if there is room
+
+        @param (int) i : any integer to push
+        @return (bool) : true if pushed, false if not
+        @exception na : na
+        @note na
+        *********************************************/
+        bool pushed = false;
+        if (top < STACKSIZE - 1) {
+            stack[++top] = i;
+            pushed = true;
+        }
+        return pushed;
     }
