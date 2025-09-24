@@ -6,7 +6,7 @@
  * simple stack data structure for integers.
  * ******************************************/
 
-// INSTRUCTIONAL: include this modules header and nothing else, no other directives
+// INSTRUCTIONAL: include this module's header and NOTHING ELSE, no other directives
 #include "stack.h"
 
 Stack::Stack() {

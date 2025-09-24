@@ -27,6 +27,9 @@ public:
     bool isEmpty();
     bool peek(int*);
 
+    // INSTRUCTIONAL: normally peek and pop should have identical in interfaces.
+    // INSTRUCTIONAL: They are only different here to demonstrate alternate solutions.
+
     /**********************
      * Setters/Mutators
      **********************/
