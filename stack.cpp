@@ -48,8 +48,24 @@ Stack::~Stack() {
         return this->top < 0;
     }
 
-    bool Stack::peek(int*) {
-        return true;
+    bool Stack::peek(int *peeki) {
+        /* ****************************************
+        Peek an item from the top of the stack
+        if there is one
+
+        @param (int*)) : a pointer to an integer to hold the peeked value
+        @return (bool) : true if peeked, false if not
+        @exception na : na
+        @note this method does not throw an exception if the stack is empty.
+        It will return false in that case. If there is an item to peek,
+        it will be placed in the integer pointed to by the parameter.
+        *********************************************/
+        bool peeked = false;
+        if (top > -1) {
+            *peeki = stack[top];
+            peeked = true;
+        }
+        return peeked;
     }
 
     int Stack::pop() {
