@@ -40,7 +40,7 @@ Stack::~Stack() {
         isEmpty - is the stack empty?
 
         @param na : na
-        @return (bool)) : true if empty, false if not
+        @return (bool) : true if empty, false if not
         @exception na : na
         @note the 'this' designation is optional. use it where
         there is ambiguity or just to be complete and precise.
@@ -53,7 +53,20 @@ Stack::~Stack() {
     }
 
     int Stack::pop() {
-        return -1;
+        /* ****************************************
+        Pop an item from the top of the stack,
+        if there is one
+
+        @param na : na
+        @return (int) : the integer popped
+        @exception (int) : throw -1 if stack is empty
+        @note this method throws an exception if the stack is empty.
+        and will return the top item otherwise.
+        *********************************************/
+        if (top < 0) {
+            throw -1; // INSTRUCTIONAL: throw an int because we cannot return one
+        }             // INSTRUCTIONAL: no 'else' is needed, throw causes an immediate halt
+        return stack[top--];
     }
 
     bool Stack::push(int i) {
